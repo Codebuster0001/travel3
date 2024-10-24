@@ -1,0 +1,282 @@
+/* Default CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Colors */
+:root {
+  --primary-black: #000;
+  --primary-white: #fff;
+}
+
+/* Utilities Classes for Section and Container */
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  max-width: 1400px;
+  margin: 0.5rem auto;
+  /* Center section horizontally */
+  padding: 10px;
+  border: 1px solid var(--primary-black);
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+  margin: 20px 0;
+}
+
+ul,
+li,
+a {
+  color: var(--primary-black);
+  text-decoration: none;
+  list-style: none;
+}
+
+.container {
+  flex: 1 1 calc(33.33%);
+  /* Three containers per row with gap */
+  margin: 10px 0;
+  padding: 20px;
+  border: 1px solid var(--primary-black);
+  box-sizing: border-box;
+}
+
+/* Header Section */
+
+/* Responsive flex direction */
+@media (max-width: 768px) {
+  section {
+    flex-direction: column;
+    gap: 0px;
+    margin: 0.5rem;
+  }
+
+  .container {
+    flex: 1 1 100%;
+  }
+}
+
+
+/* 
+Style2.css */
+
+/* Default CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Colors */
+:root {
+  --primary-black: #000;
+  --primary-white: #fff;
+  --primary-orange: rgb(243, 158, 2);
+  --font-size-large: 18px;
+}
+
+/* Utilities Classes for Section and Container */
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 0 5em;
+  padding: 0.5rem 1rem;
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+  margin: 20px 0;
+}
+
+ul,
+li,
+a {
+  text-decoration: none;
+  list-style: none;
+}
+
+.container {
+  flex: 1 1 calc(33.33% - 20px);
+  margin: 10px 0;
+  padding: 20px;
+  border: 1px solid var(--primary-black);
+  box-sizing: border-box;
+}
+
+.btn {
+  display: inline;
+  padding: 10px 25px;
+  border-radius: 5px;
+  background-color: var(--primary-black);
+  color: var(--primary-white);
+}
+
+/* Header Section */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem 1.5rem;
+  padding: 0 3rem;
+}
+
+.logo h1 {
+  font-size: 2.5rem;
+  color: var(--primary-black);
+}
+
+.logo h1 span {
+  color: var(--primary-orange);
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.menu-links {
+  display: flex;
+  list-style: none;
+}
+
+.menu-links li {
+  align-items: center;
+  margin: 0 10px;
+}
+
+.menu-links a {
+  color: var(--primary-black);
+  text-decoration: none;
+  font-size: var(--font-size-large);
+}
+
+
+ul li a.btn {
+  color: var(--primary-white);
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.7rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Hero Section */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--primary-black);
+  background-image: url(./assets/heroprofile.avif);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+  color: var(--primary-white);
+  text-align: center;
+  height: 40vw;
+}
+
+.hero .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 0.5rem 1rem;
+  z-index: 10;
+  border: 1px solid var(--primary-black);
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero p {
+  font-size: var(--font-size-large);
+}
+
+
+/* Responsive flex direction */
+@media (max-width: 836px) {
+  section {
+    flex-direction: column;
+    gap: 0;
+    margin: 0 0.5rem;
+    padding: 2px 0;
+
+  }
+
+  .container {
+    flex: 1 1 100%;
+    width: 90%;
+  }
+
+  /* Header section */
+  header {
+    padding: 0 0.5rem;
+  }
+
+  header .menu {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 35vh;
+    position: absolute;
+    top: 25%;
+    left: 0;
+    background-color: var(--primary-white);
+    z-index: 20;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .logo h1 {
+    font-size: 2rem;
+  }
+
+  header .menu-links {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+  }
+
+  header .menu-links li {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  /* Hero Section */
+
+  .hero {
+    height: 80vh;
+    border-radius: 10px;
+  }
+}
